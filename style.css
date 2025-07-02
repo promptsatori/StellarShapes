@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000011;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+#gameCanvas {
+    display: block;
+    background: linear-gradient(180deg, #000033 0%, #000011 100%);
+}
+
+.ui-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #00ffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+.score {
+    background: rgba(0, 0, 17, 0.8);
+    padding: 5px 10px;
+    border: 1px solid #00ffff;
+    border-radius: 3px;
+}
+
+.health-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.health-bar {
+    width: 200px;
+    height: 20px;
+    border: 2px solid #00ffff;
+    background: rgba(0, 0, 17, 0.8);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.health-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ff00 0%, #ffff00 50%, #ff0000 100%);
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.game-over-screen, .start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 17, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #00ffff;
+    text-align: center;
+    z-index: 20;
+}
+
+.game-over-screen h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+    animation: pulse 2s infinite;
+}
+
+.game-over-screen p, .start-screen p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+.game-over-screen.hidden, .start-screen.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Colorful title letters based on game colors */
+.title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px currentColor;
+    animation: pulse 2s infinite;
+}
+
+.letter-s1 { color: #ff0000; text-shadow: 0 0 10px #ff0000; } /* Red like enemy */
+.letter-t { color: #ff8800; text-shadow: 0 0 10px #ff8800; } /* Orange like enemy */
+.letter-e1 { color: #ffff00; text-shadow: 0 0 10px #ffff00; } /* Yellow like enemy/wings */
+.letter-l1 { color: #00ff00; text-shadow: 0 0 10px #00ff00; } /* Green like health */
+.letter-l2 { color: #0088ff; text-shadow: 0 0 10px #0088ff; } /* Blue like enemy */
+.letter-a1 { color: #8800ff; text-shadow: 0 0 10px #8800ff; } /* Purple like enemy */
+.letter-r { color: #00ffff; text-shadow: 0 0 10px #00ffff; } /* Cyan like player lasers */
+
+.letter-s2 { color: #ff0088; text-shadow: 0 0 10px #ff0088; } /* Pink */
+.letter-h { color: #88ff00; text-shadow: 0 0 10px #88ff00; } /* Lime */
+.letter-a2 { color: #ff8800; text-shadow: 0 0 10px #ff8800; } /* Orange like size powerup */
+.letter-p { color: #0088ff; text-shadow: 0 0 10px #0088ff; } /* Blue */
+.letter-e2 { color: #ff0000; text-shadow: 0 0 10px #ff0000; } /* Red like boss */
+.letter-s3 { color: #87ceeb; text-shadow: 0 0 10px #87ceeb; } /* Light blue like player */
+
+/* 16-bit style pixelated effects */
+canvas {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
