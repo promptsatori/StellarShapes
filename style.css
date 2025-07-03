@@ -22,7 +22,7 @@ body {
 
 #gameCanvas {
     display: block;
-    background: linear-gradient(180deg, #000033 0%, #000011 100%);
+    background: #000000;
 }
 
 .ui-overlay {

@@ -728,8 +728,8 @@ class Game {
             this.ctx.translate(shakeX, shakeY);
         }
         
-        // Clear canvas with trail effect for game objects
-        this.ctx.fillStyle = 'rgba(0, 0, 17, 0.1)';
+        // Clear canvas with trail effect for game objects (pure black background)
+        this.ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
         this.ctx.fillRect(0, 0, this.width, this.height);
         
         // Draw stars (no trails)
