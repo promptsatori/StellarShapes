@@ -1,12 +1,12 @@
-# Stellar Shapes 2 - Enhanced Space Adventure (Game 5)
+# Stellar Shapes - Enhanced Space Adventure
 
 ## Overview
-Stellar Shapes 2 is an enhanced version of Game 4 with improved graphics, animations, and visual effects. This space shooter features smooth player movement, particle effects, and an immersive cosmic environment with enhanced power-up systems.
+Stellar Shapes is an enhanced version of Game 4 with improved graphics, animations, and visual effects. This space shooter features smooth player movement, particle effects, and an immersive cosmic environment with enhanced power-up systems.
 
 ## New Features & Enhancements
 
 ### Visual Improvements
-- **Animated Title**: "Stellar Shapes 2" title with floating rainbow letters and a prominent, glowing "2"
+- **Animated Title**: "Stellar Shapes" title with floating rainbow letters
 - **Enhanced Background**: 
   - Twinkling animated starfield with brightness variations
   - Subtle space gas clouds with organic shapes for depth
@@ -63,7 +63,7 @@ Stellar Shapes 2 is an enhanced version of Game 4 with improved graphics, animat
 - **Auto-pause**: No more enemy buildup when switching tabs
 - **Enhanced orange power-up**: Now shoots orange lasers with 3x damage
 - **Improved visuals**: Subtle space gas clouds and enhanced effects
-- **Updated title**: "Stellar Shapes 2" with prominent styling
+- **Updated title**: "Stellar Shapes" with prominent styling
 
 ## Power-ups
 - **Health** (Green): Restores health
@@ -76,4 +76,4 @@ Stellar Shapes 2 is an enhanced version of Game 4 with improved graphics, animat
 - `style.css` - Enhanced styling with floating title animations
 - `README.md` - This documentation
 
-Enjoy Stellar Shapes 2 - the ultimate enhanced space adventure!
+Enjoy Stellar Shapes - the ultimate enhanced space adventure!
