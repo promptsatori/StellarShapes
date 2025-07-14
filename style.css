@@ -108,28 +108,78 @@ body {
     50% { opacity: 0.7; }
 }
 
-/* Colorful title letters based on game colors */
+/* Static title with glow like Game 4 */
 .title {
     font-size: 3em;
     margin-bottom: 20px;
     text-shadow: 0 0 10px currentColor;
     animation: pulse 2s infinite;
+    letter-spacing: 0.05em;
 }
 
-.letter-s1 { color: #ff0000; text-shadow: 0 0 10px #ff0000; } /* Red like enemy */
-.letter-t { color: #ff8800; text-shadow: 0 0 10px #ff8800; } /* Orange like enemy */
-.letter-e1 { color: #ffff00; text-shadow: 0 0 10px #ffff00; } /* Yellow like enemy/wings */
-.letter-l1 { color: #00ff00; text-shadow: 0 0 10px #00ff00; } /* Green like health */
-.letter-l2 { color: #0088ff; text-shadow: 0 0 10px #0088ff; } /* Blue like enemy */
-.letter-a1 { color: #8800ff; text-shadow: 0 0 10px #8800ff; } /* Purple like enemy */
-.letter-r { color: #00ffff; text-shadow: 0 0 10px #00ffff; } /* Cyan like player lasers */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
 
-.letter-s2 { color: #ff0088; text-shadow: 0 0 10px #ff0088; } /* Pink */
-.letter-h { color: #88ff00; text-shadow: 0 0 10px #88ff00; } /* Lime */
-.letter-a2 { color: #ff8800; text-shadow: 0 0 10px #ff8800; } /* Orange like size powerup */
-.letter-p { color: #0088ff; text-shadow: 0 0 10px #0088ff; } /* Blue */
-.letter-e2 { color: #ff0000; text-shadow: 0 0 10px #ff0000; } /* Red like boss */
-.letter-s3 { color: #87ceeb; text-shadow: 0 0 10px #87ceeb; } /* Light blue like player */
+/* Stellar Shapes 2 title colors with enhanced glow */
+.letter-s1 { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
+.letter-t { color: #ff8800; text-shadow: 0 0 10px #ff8800; }
+.letter-e1 { color: #ffff00; text-shadow: 0 0 10px #ffff00; }
+.letter-l1 { color: #00ff00; text-shadow: 0 0 10px #00ff00; }
+.letter-l2 { color: #0088ff; text-shadow: 0 0 10px #0088ff; }
+.letter-a1 { color: #8800ff; text-shadow: 0 0 10px #8800ff; }
+.letter-r { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+
+.letter-s2 { color: #ff0088; text-shadow: 0 0 10px #ff0088; }
+.letter-h { color: #88ff00; text-shadow: 0 0 10px #88ff00; }
+.letter-a2 { color: #ff8800; text-shadow: 0 0 10px #ff8800; }
+.letter-p { color: #0088ff; text-shadow: 0 0 10px #0088ff; }
+.letter-e2 { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
+.letter-s3 { color: #87ceeb; text-shadow: 0 0 10px #87ceeb; }
+
+/* Prominent "2" styling with subtle animation */
+.number-2 { 
+    color: #ffaa00; 
+    text-shadow: 0 0 25px #ffaa00, 0 0 50px #ffaa00, 0 0 75px #ffaa00; 
+    animation: subtlePulse 4s ease-in-out infinite;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-left: 0.1em;
+}
+
+@keyframes subtlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+
+/* Button styles */
+.start-btn, .restart-btn {
+    background: linear-gradient(45deg, #00ffff, #0088ff);
+    border: 2px solid #00ffff;
+    color: #000011;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: none;
+    box-shadow: 0 0 15px #00ffff;
+    transition: all 0.3s ease;
+}
+
+.start-btn:hover, .restart-btn:hover {
+    background: linear-gradient(45deg, #ffffff, #00ffff);
+    box-shadow: 0 0 25px #00ffff;
+    transform: scale(1.05);
+}
+
+.start-btn:active, .restart-btn:active {
+    transform: scale(0.95);
+}
 
 /* 16-bit style pixelated effects */
 canvas {
